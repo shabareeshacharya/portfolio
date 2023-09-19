@@ -1,0 +1,175 @@
+    
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> protfolio </title>
+        <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+       <div class="header">
+        
+       
+       
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfoloi</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>  
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>shabareesh</span></h1>
+             </div> 
+            </div>
+           
+        </div>
+
+
+        <!---------------------About me page -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-cloum-1 image">
+                        <img src="images/sss.jpeg" >
+                    </div>
+                        <div class="about-cloum-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>
+                                Hello! I'm shabareesh, a determined BTech student in Computer Science. 
+                                I'm on a journey to become a proficient software developer, driven by my fascination with 
+                                coding and problem-solving. My pursuit
+                                 of knowledge is unending, and I thrive on embracing new challenges.
+                            </br>
+                            While coding is my primary passion, I find joy in the world of cinema.
+                             Movies provide a window into diverse narratives, sparking my creativity and broadening my perspective. 
+                             These moments of leisure
+                             recharge me and fuel my dedication to becoming a well-rounded software developer.<br>
+                             I'm eager to secure an internship as a web or Java developer, 
+                             where I can apply my skills effectively. Joining a dynamic team is a goal I'm excited about,
+                              contributing and learning in a hands-on environment. 
+                             Let's connect and explore this opportunity together!
+                            </p>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+
+        <!-----Skills Section-->
+       
+        <div id="skills">
+           
+           
+        <div class="my-container">
+            <h1>My Skills</h1>
+
+<p>HTML</p>
+<div class="m-container">
+  <div class="skills html">90%</div>
+</div>
+
+<p>CSS</p>
+
+<div class="m-container">
+  <div class="skills css">80%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="m-container">
+  <div class="skills js">65%</div>
+</div>
+
+     <p>Java</p>
+         <div class="m-container">
+         <div class="skills java">60%</div>
+       </div>
+        </div>
+    </div>
+
+
+    <!-----------------------portFolio-->
+    <div id="portfolio">
+        
+        <div class="p-container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    
+               
+                    <img src="images/calulator.jpg" class="img1" >
+                    <a class="image-button" onclick="window.location.href='works/calculator1.html'">
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                        Simple calulator <br>Take a look
+                    </a> 
+                </div>
+                <div class="work">
+                    <img src="images/forest - Copy.jpg" class="img2">
+                    <a class="image-button" onclick="window.location.href='https://shabareeshacharya.github.io/landing-page/'">
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                        landing page </br> Take a look
+                    </a>
+                </div>
+                
+                
+            </div>
+            <p1>Simple calulator</p1>
+            <p2>Landing page</p2>
+            
+        </div>
+    </div>
+    <!----------------Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row1">
+                <div class="contact-left">
+                    <h1 class="sub-title1">Contact me</h1>
+                    <p><i class="fa fa-telegram" aria-hidden="true"></i>shabarush@gmail.com</p>
+                    <p><i class="fa fa-mobile" aria-hidden="true"> </i>  +91 9353516188</p>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/shabareesh-acharya-b02a82269"><i class="fa fa-linkedin-square"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://github.com/shabareeshacharya"> <i class="fa fa-github" aria-hidden="true"></i></a>
+                    <div class="download-btn">
+                        <a href="images\cv.pdf"  download class="btn btn2 ">Download CV</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="your Name" required>
+                    <input type="email" name="email" placeholder="your Email"required>
+                    <textarea name="message"   rows="6" placeholder="Your message"></textarea>
+                    <button type="submit"class="btn btn2">submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+            
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxRLr4wGnFIUHqv3mf2wvq4cracuvhaqz2zOczKZxLcyRqjoM7GFXfFXD0C-T5OPxs/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+    
+  </script>
+  </body>
+</html>
